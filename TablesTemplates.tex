@@ -1,0 +1,532 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Original author:
+% Thiago Nascimento da Silva
+%
+% Tables Templates 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt,a4paper]{article} 
+\usepackage[utf8]{inputenc} %% UTF-8 bytes as a Unicode character
+\usepackage[T1]{fontenc} %% T1 font encoding is an 8-bit encoding and uses fonts that have 256 glyph
+\usepackage[margin=1in]{geometry} %% Changing the margins
+\usepackage{amsthm, amsmath, amsfonts, mathtools, amssymb} %% Math packages 
+\usepackage{pifont} %% It provides commands for Pi fonts (dingmacro, symbols, etc.)
+\newcommand{\cmark}{\ding{51}} %% From dingmacro: it creates a checkmark symbol 
+\newcommand{\xmark}{\ding{55}} %% From dingmacro: it creates a X mark symbol
+\usepackage{graphicx} %% To import external graphics
+\usepackage{float} %% To prevent floats
+\usepackage{multirow} %% To create tabular cells spanning multiple rows
+\usepackage{array} %% An extended implementation of the array and tabular environments
+\usepackage{lscape} %%  Landscape orientation
+\usepackage{setspace} %% Finely control line spacing
+\usepackage[flushleft]{threeparttable} %% To insert simple table notes (left alignment)
+\usepackage{listings} %% To add non-formatted text
+\usepackage{booktabs} %% This package enhances the quality of tables in LaTeX, providing extra commands
+\usepackage{tikz} % Tikz is probably the most complex and powerful tool to create graphic elements in Latex
+\usetikzlibrary{trees, calc} % Tikz library
+\usepackage{sgame} %% Game theory package (drawing strategic games)
+\usepackage{subfig} %% Manipulation and reference of small or sub figures and tables  
+\usepackage[colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref} %% To create hyperlinks within the document
+\usepackage{ragged2e} %% To set ragged text and to allow hyphenation
+\usepackage{caption} %% To customise the captions
+\usepackage{longtable} %% It allows you to write tables that continue to the next page.
+\usepackage{rotating} %% To perform all the different sorts of rotation
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{	
+\Large{Table Templates for \LaTeX} \\   % The assignment title
+}
+%\vspace{10mm} % vertical space
+
+\author{\\ Thiago Silva \\ \large  Graduate Student in Political Science \\ \large Texas A\&M University \\ \large \textcolor{blue}{nsthiago@tamu.edu}}% Your name
+
+\date{\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	Tables
+%----------------------------------------------------------------------------------------
+
+\begin{table}[htbp] \centering 
+  \caption{President's Executive Powers Over Cabinets - Descriptive Statistics  \label{PrePower} } 
+\begin{tabular}{@{\extracolsep{5pt}}lccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Variable Label (Variable Name) & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Max} \\ 
+\hline \\[-1.8ex] 
+Year of the Constitution (Year) & 18 & &  & 1853 & 2010 \\ 
+Last Update of the Constitution (Updated) & 18 &  &  & 1993 & 2014 \\ 
+Cabinet Removal (Removal) & 18 & 0.8 & 0.4 & 0 & 1 \\ 
+Cabinet Selection (Selection) & 18 & 0.8 & 0.4 & 0 & 1 \\ 
+Ministers' Eligibility (Eligibility) & 18 & 0.8 & 0.4 & 0 & 1 \\ 
+Ministers' Countersignature (Countersignature) & 18 & 0.3 & 0.5 & 0 & 1 \\ 
+Powers of the Cabinet (Powers Cabinet) & 18 & 0.5 & 0.5 & 0 & 1 \\ 
+Summation of the Powers (Sum) & 18 & 3.2 & 1.5 & 0 & 5 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\raggedright\scriptsize\emph{Source:} {Silva, Vieira and Araujo (2015).}
+\end{table}
+
+%----------------------------------------------------------------------------------------
+
+\begin{table}[htbp!]
+\centering
+\caption{Latin American Gender Quota Laws in Lower or Single House \label{LAquotas}}
+\begin{tabular}{lcccc} \hline\hline
+\textbf{Country} & \textbf{Adoption's} & \textbf{\% of the} & \multicolumn{2}{c}{\textbf{Women Representation}}\\
+ & \textbf{Year} & \textbf{Quota} & \textbf{1 yr Before Law} & \textbf{January 2016}\\
+\hline
+	Brazil & 1995 & 30\% & 6.6\% & 9.9\% \\ 
+	Venezuela & 1998 & 30\% & 5.9\% & 14.4\% \\ 
+	Paraguay & 1996 & 20\% & 2.5\% & 15\% \\
+	Panama & 1997 & 30\% & 9.7\% & 18.3\% \\ 
+    Dominican Republic & 1997 & 33\% & 11.7\% & 20.8\% \\ 
+	Peru & 1997 & 30\% & 10.8\% & 22.3\% \\
+	Costa Rica & 1996 & 50\% & 15.8\% & 33.3\% \\ 
+	Argentina & 1991 & 30\% & 6\% & 35.8\% \\
+	Ecuador & 1997 & 50\% & 17\% & 41.6\% \\ 
+	Bolivia & 1997 & 50\% & 6.9\% & 53.1\% \\ 
+	\hline
+\end{tabular}
+\begin{flushleft} 
+\scriptsize\emph{Source:} {Freidenberg and Garcia (2015), Sagarzazu and Silva (2015), and IPU (2016).}
+\end{flushleft}
+\end{table}
+
+%----------------------------------------------------------------------------------------
+
+\begin{table}[htbp]
+\centering
+\caption{Party Divisions of the U.S. Congress (1981-2015)\label{divided}}
+\begin{tabular}{lllllll}
+\hline\hline
+	\textbf{President} & \textbf{Congress} & \textbf{Years} & \multicolumn{3}{c}{\textbf{Senate}}{\textbf{House}}\\
+	\cline{4-5}\cline{6-7} &&&Dem.&Rep. & Dem.&Rep.\\
+	
+	 \hline
+	Ronald Reagan  & 97th & 1981-1983 & 46 & 53 & \textbf{242} & 192 \\ 
+	  (Republican) & 98th & 1983-1985 & 46 & 54 & \textbf{269} & 166    \\ 
+	  & 99th & 1985-1987 & 47 & 53 & \textbf{253} & 182    \\ 
+      & 100th & 1987-1989 & \textbf{55} & 45 & \textbf{258} & 177    \\ 
+	  \\
+	George H. W. Bush  & 101st & 1989-1991 & \textbf{55} & 45 & \textbf{260} & 175 \\
+	 (Republican) & 102nd & 1991-1993 & \textbf{56} & 44 & \textbf{267} & 167    \\ 
+	 \\
+	Bill Clinton  & 103rd & 1993-1995 & 57 & 43 & 258 & 176 \\ 
+	 (Democrat) & 104th & 1995-1997 & 48 & \textbf{52} & 204 & \textbf{230}    \\ 
+	 & 105th & 1997-1999 & 45 & \textbf{55} & 207 & \textbf{226}    \\ 
+	 & 106th & 1999-2001 & 45 & \textbf{55} & 211 & \textbf{223}    \\ 
+	 \\
+	George W. Bush  & 107th & 2001-2003 & 50/50$^{a}$ & 50/49$^{b}$ & 212 & 221 \\ 
+	  (Republican) & 108th & 2003-2005 & 48 & 51 & 205 & 229    \\ 
+	  & 109th & 2005-2007 & 44 & 55 & 202 & 231    \\ 
+	  & 110th & 2007-2009 & 49 & 49 & \textbf{236} & 199    \\ 
+	  \\
+	Barack Obama  & 111th & 2009-2011 & 56/58$^{c}$ & 41/42$^{d}$ & 257 & 178 \\ 
+	 (Democrat) & 112th & 2011-2013 & 51 & 47 & 193 & \textbf{242}    \\ 
+	  & 113th & 2013-2015 & 53 & 45 & 201 & \textbf{234}    \\ 
+	\hline
+	\end{tabular}\\
+	\begin{flushleft} 
+	\scriptsize\textbf{Source:} {Elaborated by Silva. Information from the U.S. Senate and the U.S. House of Representatives, 2014.} \\
+	\scriptsize\textbf{Notes:} Bold numbers indicate divided government.\\
+	\emph{a}. The Democratic Party controlled the 107th Congress from January 3 to January 20, 2001 (50/50 tie) and from May 24, 2001 to January 3, 2003. \\
+	\scriptsize\emph{b}. The Republican Party controlled the 107th Congress from January 20, 2001 (50/50 tie) until May 24, 2001.\\
+	\scriptsize\emph{c}. From January 27 to April 28, 2009, there were 56 Democratic Senators and 41 Republicans Senators. \\
+	\scriptsize\emph{d}. From January 3 to April 28, 2009, there were 41 Republican Senators. The Senate in the last month of the 111th Congress stood at 42 Republicans and 56 Democrats.\\
+\end{flushleft}
+	\end{table}
+
+%----------------------------------------------------------------------------------------
+
+\begin{table}[htbp]
+\footnotesize
+\centering
+\caption{World Cup Hosts, Champions and Respective Political Regimes\label{worldcup}}
+	\begin{tabular}{lllll}\hline\hline
+		\textbf{Year} & \textbf{Host} & \textbf{Host's} & \textbf{Champion} & \textbf{Champion's} \\ 
+		\textbf{} & \textbf{} & \textbf{Political Regime} & \textbf{} & \textbf{Political Regime} \\ 
+		\hline
+		1930 & Uruguay & Democracy & Uruguay & Democracy \\ 
+		1934 & Italy & \textbf{Dictatorship} & Italy & \textbf{Dictatorship} \\ 
+		1938 & France & Democracy & Italy & \textbf{Dictatorship} \\ 
+		1950 & Brazil & Democracy & Uruguay & Democracy \\ 
+		1954 & Switzerland & Democracy & West Germany & Democracy \\ 
+		1958 & Sweden & Democracy & Brazil & Democracy \\ 
+		1962 & Chile & Democracy & Brazil & Democracy \\ 
+		1966 & England & Democracy & England & Democracy \\ 
+		1970 & Mexico & \textbf{Dictatorship} & Brazil & \textbf{Dictatorship} \\ 
+		1974 & West Germany & Democracy & West Germany & Democracy \\ 
+		1978 & Argentina & \textbf{Dictatorship} & Argentina & \textbf{Dictatorship} \\ 
+		1982 & Spain & Democracy & Italy & Democracy \\ 
+		1986 & Mexico & \textbf{Dictatorship} & Argentina & Democracy \\ 
+		1990 & Italy & Democracy & West Germany & Democracy \\ 
+		1994 & US & Democracy & Brazil & Democracy \\
+		1998 & France & Democracy & France & Democracy \\ 
+		2002 & South Korea/Japan & Democracy & Brazil & Democracy \\ 
+		2006 & Germany & Democracy & Italy & Democracy \\ 
+		2010 & South Africa & Democracy & Spain & Democracy \\ 
+		2014 & Brazil & Democracy & Germany & Democracy \\ 
+		2018 & Russia & ? & ? & ? \\ 
+		2022 & Qatar & \textbf{Dictatorship (Monarchy)} & ? & ? \\                                 
+\hline
+\end{tabular}
+\begin{flushleft} 
+\scriptsize\textbf{Source:} {Elaborated by Silva, based on information gathered from FIFA (http://www.fifa.com), Freedom House (https://www.freedomhouse.org) and ACLP Dataset.}
+\end{flushleft}
+\end{table}	
+	
+%----------------------------------------------------------------------------------------
+
+\begin{table}[htbp]
+	\centering
+	\caption{School Attendance and Health Surveillance of Cash Transfers's Beneficiaries in Brazil (2006-2010)\label{School}}
+\begin{tabular}{ccccc}
+ \hline\hline
+ & \multicolumn{2}{c}{Education} & \multicolumn{2}{c}{Health} \\
+ \cmidrule(r){2-3} \cmidrule(r){4-5}
+ & Children (in Millions) & Percentage & Families (in Millions) & Percentage \\
+ \hline
+ 2006 2nd semester & 9.6 & 62.8 & 3.4 & 40.3\\
+ 2007 1st semester & 12.0 & 78.9 & 4.8 & 51.1\\
+ 2007 2nd semester & 13.2 & 84.7 & 5.2 & 54.6\\
+ 2008 1st semester & 13.0 & 84.9 & 6.1 & 62.7\\
+ 2008 2nd semester & 12.7 & 84.8 & 5.7 & 63.6\\
+ 2009 1st semester & 13.0 & 85.7.8 & 6.1 & 63.1\\
+ 2009 2nd semester & 14.0 & 89.5 & 6.3 & 64.5\\
+ 2010 1st semester & 13.6 & 85.7 & 6.8 & 67.5\\
+ \hline
+\end{tabular}
+\begin{flushleft} 
+\scriptsize\textbf{Source:} {Monitoring System of School Attendance and Food and Nutrition Surveillance System (SISVAN); DEGES/SEANRC/MDS; Soares (IPEA, 2012, p. 10)}\\
+\end{flushleft}
+\end{table}
+
+%----------------------------------------------------------------------------------------
+
+\begin{table}[htbp]
+	\centering
+	\footnotesize
+	\caption{Brazilian Federal Government's Social Transfers Programs \label{STransfer}}
+\begin{tabular}{llll}
+ \hline\hline
+ &  & \multicolumn{2}{c}{\textbf{Amount in 2009}} \\
+ \cmidrule(r){3-4}
+\textbf{Type of Transfer} & \textbf{Name} & \textbf{In Billions of Reais} & \textbf{In \% of the GDP} \\
+\hline
+ Social Assistance & Continuous Provision Benefit (BPC) & 18.7 & 0.6 \\
+ Social Assistance & Bolsa Fam\'{i}lia Program (PBF) & 12.5 & 0.4 \\
+ Social Security & Social Security General System (RGPS) & 199.2 & 6.1 \\
+ Social Security & Other Social Security System (RPPS) & 134.2 & 4.1\\
+ Other & Money Allowance & 7.6 & 0.2 \\
+ Other & Funds for Length of Service (FGTS) & 54.7 & 1.7 \\
+ Other & Unemployment Insurance & 19.7 & 0.6 \\
+ \hline
+\end{tabular}
+\begin{flushleft} 
+\scriptsize\textbf{Source:} {Secretaria de Avalia\c{c}\~{a}o e Gest\~{a}o da Informa\c{c}\~{a}o (SAGI/MDS); (IPEA, 2013, p. 198)}\\
+\end{flushleft}
+\end{table}
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{table}[ht]
+	\newcommand\LongestHeader{$\qquad$ High $\qquad$} % replace "ExtremelyLongHeader" with actual header...
+	\newlength\mylen
+	\settowidth\mylen{\LongestHeader} % \mylen measures width of \LongestHeader
+\renewcommand\arraystretch{2.5} % provide a bit taller rows
+\centering
+\caption{2x2: Dimension 1 and Dimension 2}
+\begin{tabular}{c c | c | c |}
+& \multicolumn{1}{c}{} &\multicolumn{2}{c}{\textbf{Dimension 2}}\\[-2ex]
+& \multicolumn{1}{c}{}
+& \multicolumn{1}{c}{\LongestHeader}
+& \multicolumn{1}{c}{\parbox{\mylen}{\centering Low}}\\ % replace "LilHeader" with real column header
+\cline{3-4}
+\multirow{2}{*}{\rotatebox{90}{\textbf{Dimension 1}}}
+&High&\xmark & \cmark \\
+\cline{3-4}
+&Low&\cmark& \xmark \\
+\cline{3-4}
+\end{tabular}
+\end{table}
+
+%----------------------------------------------------------------------------------------
+
+\begin{table} [htbp]
+	\centering
+\caption{Rotating labels \label{rotate}}
+          \begin{tabular}{cccl}
+          \toprule
+          \multirow{2}[0]{2em}{} & \multicolumn{2}{c}{Collegial Executive}\\
+          \cmidrule(rl){2-3}
+           & Yes & No & \\
+          \midrule
+          \rotatebox[origin=c]{60}{Strong President}& Uruguay & Venezuela \\
+          \rotatebox[origin=c]{60}{Weak President} & Bolivia & Paraguay \\
+		  & & Peru\\
+          \bottomrule
+          \end{tabular}
+\end{table}
+
+%----------------------------------------------------------------------------------------
+
+
+\begin{table}
+\centering
+\footnotesize
+\caption[caption]{Row Conditional Relative Frequency: How much tax should each person pay, by household monthly income (2010). \\\hspace{\textwidth} \textit{Row =} Into which of the following income ranges does the total monthly income of this household fit, including remittances from abroad and the income of all the working adults and children (in Brazilian Reais)? \\\hspace{\textwidth} \textit{Column =} Suppose a rich person has 1 real and a poor person has 1 real. In your opinion, how much tax should each person pay?}
+\newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
+\begin{tabular}{l *{5}{c} }\\
+\toprule
+
+&\textit{More Progressive}&&&\textit{Less Progressive} \\
+
+&\textbf{Rich 60 cents}&\textbf{Rich 50 cents}&\textbf{Rich 40 cents}&\textbf{Rich 30 cents} \\
+
+&\textbf{Poor 10 cents}&\textbf{Poor 20 cents}&\textbf{Poor 30 cents}&\textbf{Poor 30 cents} \\
+
+\cmidrule(l{.75em}){2-2} \cmidrule(l{.75em}){3-3}\cmidrule(l{.75em}){4-4}\cmidrule(l{.75em}){5-5}
+\textbf{\textit{Income}}&\%&\%&\%&\% \\
+
+\midrule
+No Income&52.9&20.6&5.9&20.6 \\
+R\$ 0,01 to R\$ 510 &46.5&13.2&8.9&31.4 \\
+R\$ 510,01 to R\$ 1020 &40.5&15.6&8.1&35.8 \\
+R\$ 1020,01 to R\$ 1.530 &35.8&14.0&10.3&39.8 \\
+R\$ 1.530,01 to R\$ 2.550 &37.1&12.9&11.9&38.1 \\
+R\$ 2.550,01 to R\$ 3.570 &32.4&19.3&9.7&38.6 \\
+R\$ 3.570,01 to R\$ 4.080 &29.6&14.8&7.4&48.1 \\
+R\$ 4.080,01 to R\$ 6.120 &27.1&14.6&6.2&52.1 \\
+R\$ 6.120,01 to R\$ 7.650 &22.2&33.3&0.0&44.4 \\
+R\$ 7.650,01 to R\$ 10.200 &23.1&15.4&23.1&38.5 \\
+More than R\$ 10.200,01&42.9&21.4&7.1&28.6 \\
+\bottomrule
+\addlinespace[.75ex]
+\end{tabular}
+\par
+\scriptsize{\emph{Source: }The Latin American Public Opinion Project (LAPOP) - Brazil 2010.}\\
+\scriptsize{\emph{Notes:} \% = Relative frequency (percentage) by row.}\\
+\scriptsize{Pearson chi2(30) =  45.8277. Pr = 0.032.}
+\end{table}
+
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{table}[htbp] \centering 
+	\footnotesize
+  \caption{Correlation Matrix} 
+  \label{matrix1} 
+\begin{tabular}{c|cccccc} 
+\hline\hline 
+\multicolumn{1}{c|}{\emph{Variable}}  & \multicolumn{1}{c}{Duration} & \multicolumn{1}{c}{Inflation} & \multicolumn{1}{c}{Unemployment} & \multicolumn{1}{c}{GDP} & \multicolumn{1}{c}{Cycle} & \multicolumn{1}{c}{Coalition Size} \\ 
+\hline \\[-1.8ex]
+Duration	&	1	&	-0.167020554	&	0.129304483	&	0.022518059	&	0.10094269	&	-0.28183733	\\
+Inflation	&	-0.16702055	&	1	&	-0.422224931	&	-0.326982389	&	0.0604145	&	0.01195589	\\
+Unemployment	&	0.12930448	&	-0.422224931	&	1	&	0.002938322	&	0.23432405	&	-0.08494898	\\
+GDP	&	0.02251806	&	-0.326982389	&	0.002938322	&	1	&	0.01585105	&	0.08092697	\\
+Cycle	&	0.10094269	&	0.060414501	&	0.234324051	&	0.015851048	&	1	&	-0.02575777	\\
+Coalition Size	&	-0.28183733	&	0.01195589	&	-0.084948981	&	0.080926972	&	-0.02575777	&	1	\\
+\hline 
+\end{tabular} 
+\end{table} 
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{table}[!htbp] \centering 
+	\footnotesize
+  \caption{Independent Variables, Summary Statistics and Expectations} 
+  \label{descriptive} 
+\begin{tabular}{llc} 
+\hline\hline 
+\multicolumn{1}{l}{\emph{Variable} and Summary Statistics}  & \multicolumn{1}{c}{Coding} & \multicolumn{1}{c}{Expectation} \\ 
+\hline \\[-1.8ex]
+%\emph{Duration:} & Number of days that the cabinet endured & \textbf{Dependent} \\
+%$\mu=579.60$, $\sigma=483.11$, $N=83$ && \textbf{Variable}\\
+%$min=30$, $max=1,826$ &&\\
+%\\
+\emph{Inflation:} & Quarterly percentage change in CPI & \textbf{+} \\
+$\mu=22.71$, $\sigma=43.46$, $N=82$ &&\\
+$min=-0.58$, $max=204.54$ &&\\
+\\
+\emph{Unemployment:}  & Quarterly percentage of the labor force  & \textbf{+} \\
+$\mu=9.29$, $\sigma=3.56$, $N=82$ & without work &\\
+$min=3.40$, $max-19.82$ &&\\
+\\
+\emph{President's Approval Rate:}  & Quarterly percentage of presidential  & \textbf{-} \\
+$\mu=43.30$, $\sigma=11.91$, $N=72$ & job approval &\\
+$min=14.93$, $max=69.60$ &&\\
+\\
+\emph{GDP Growth:}  & Annual percentage growth rate of GDP & \textbf{-} \\
+$\mu=2.69$, $\sigma=4.31$, $N=82$ &&\\
+$min=-11.70$, $max=11.94$ &&\\
+\\
+\emph{Cycle:}  & $\frac{T_{e} - T_{ca}}{T_{co}}$  & No \\
+$\mu=0.62$, $\sigma=0.31$, $N=82$ && relationship\\
+$min=0$, $max=1.5$ &&\\
+\\
+\emph{Size of the Coalition:}  & Number of parties represented in the cabinet  & \textbf{+} \\
+$\mu=3.50$, $\sigma=1.62$, $N=82$ &&\\
+$min=2$, $max=8$ &&\\
+\\
+\emph{Legislative Power (IPIL):} & Index of presidential dominance over  & \textbf{-} \\
+$\mu=0.50$, $\sigma=0.08$, $N=82$ & the lawmaking process &\\
+$min=0.28$, $max=0.71$ &&\\
+\\
+\emph{Ideological Dispersion:} & $|P_{fl} - P_{fr}|$  & \textbf{+} \\
+$\mu=0.85$, $\sigma=0.66$, $N=82$ &&\\
+$min=0$, $max=2$ &&\\
+\\
+\emph{Majority Status}  & Dichotomous variable: 1 = cabinet with a majority   & \textbf{-} \\
+$N=83$ & status; 0 = cabinet with a minority status & \\
+\\
+\emph{Cabinet Coalescence Rate:} & $1 - \frac{\sum_{i=1}^n (|s_{i} - p_{i}|)}{2}$  & \textbf{-} \\
+$\mu=0.94$, $\sigma=0.05$, $N=82$ &&\\
+$min=0.74$, $max=1$ &&\\
+\\
+\emph{Effective Number of Parties (ENP):}  & $\frac{1}{\sum_{i=1}^{n}s_{i}^{2}}$  & \textbf{+} \\
+$\mu=5.36$, $\sigma=2.27$, $N=82$ &&\\
+$min=1.98$, $max=9.34$ &&\\
+\\
+%\emph{Bicameralism} & Dichotomous variable: 1 = bicameral system;  & \textbf{-} \\
+%$N=83$ & 0 = unicameral system &\\
+\hline 
+\end{tabular} 
+\\
+\tiny{\emph{Notes:} $\mu=$arithmetic mean, and $\sigma=$ standard deviation. The dependent variable is the hazard rate of cabinet duration. Thus, a negative sign (-) in the column \emph{Expectation} refers to a smaller likelihood of cabinet termination---meaning a longer cabinet duration---as the value for the independent variable increases (keeping all other independent variables constant). A positive sign (+) refers to a greater likelihood of cabinet termination---a shorter cabinet duration---as the value for the independent variable increases (keeping all other independent variables constant).}
+\end{table} 
+
+%----------------------------------------------------------------------------------------
+
+\begin{sidewaystable}
+\centering
+\caption[caption]{Column Conditional Relative Frequency: Brazil's most serious problem by household monthly income (2010). \\\hspace{\textwidth} \textit{Column =} Into which of the following income ranges does the total monthly income of this household fit, including remittances from abroad and the income of all the working adults and children (in Brazilian Reais)? \\\hspace{\textwidth} \textit{Row =} In your opinion, what is the most serious problem faced by Brazil?}
+\scriptsize
+\newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
+\begin{tabular}{cl *{13}{c} }\\
+\toprule
+\cmidrule(l{.75em}){2-12} 
+&&\textbf{No}&\textbf{0,01}&\textbf{510,01}&\textbf{1020,01}&\textbf{ 1.530,01}&\textbf{2.550,01}&\textbf{3.570,01}&\textbf{4.080,01}&\textbf{6.120,01}&\textbf{7.650,01}&\textbf{More than}\\
+
+&&\textbf{Income}&\textbf{to 510}&\textbf{to 1.020}&\textbf{to 1.530}&\textbf{to 2.550}&\textbf{to 3.570}&\textbf{to 4.080}&\textbf{to 6.120}&\textbf{to 7.650}&\textbf{to 10.200}&\textbf{10.200,01} \\
+
+
+\cmidrule(l{.75em}){3-3}\cmidrule(l{.75em}){4-4}\cmidrule(l{.75em}){5-5}\cmidrule(l{.75em}){6-6}\cmidrule(l{.75em}){7-7}\cmidrule(l{.75em}){8-8}\cmidrule(l{.75em}){9-9}\cmidrule(l{.75em}){10-10}\cmidrule(l{.75em}){11-11}\cmidrule(l{.75em}){12-12}\cmidrule(l{.75em}){13-13}
+
+
+\textbf{\textit{Rank$^{a}$}}&\textbf{\textit{Problem}}&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%&\%\\
+\midrule
+1	&	Violence&20.0&16.9&15.3&18.4&12.2&10.1&14.3&11.8&22.2&13.3&0.0&15.4 \\
+2	&	Health&11.4&12.8&14.0&16.0&16.2&13.4&12.5&7.8&0.0&6.7&7.1&14.0 \\
+3	&	Unemployment&8.6&16.5&13.3&13.1&8.4&6.0&12.5&3.9&0.0&0.0&21.4&12.5 \\
+4	&	Corruption&17.1&5.0&7.5&8.1&11.9&10.7&23.2&13.7&33.3&20.0&14.3&8.7 \\
+\textbf{5}	&	\textbf{Inequality}&\textbf{8.6}&\textbf{3.3}&\textbf{5.7}&\textbf{4.3}&\textbf{5.6}&\textbf{6.0}&\textbf{1.8}&\textbf{9.8}&\textbf{11.1}&\textbf{0.0}&\textbf{0.0}&\textbf{4.9} \\
+6	&	Security&5.7&5.0&4.3&4.8&5.0&5.4&5.4&5.9&0.0&13.3&0.0&4.8 \\
+7	&	Drugs&0.0&3.9&4.3&3.6&5.3&8.7&3.6&2.0&0.0&0.0&0.0&4.3 \\
+8	&	Crime&0.0&4.1&6.1&3.1&3.4&4.0&1.8&0.0&11.1&0.0&0.0&4.2 \\
+9	&	Poverty&5.7&4.5&4.2&3.3&3.8&5.4&3.6&2.0&0.0&0.0&21.4&4.1 \\
+10	&	Education&2.9&1.9&3.7&3.3&5.0&7.4&5.4&5.9&0.0&6.7&7.1&3.7 \\
+11	&	Other&5.7&1.3&2.8&2.4&3.1&2.0&3.6&7.8&0.0&0.0&7.1&2.6 \\
+12	&	Drug trafficking&0.0&3.0&2.4&2.1&3.4&2.0&1.8&2.0&0.0&6.7&0.0&2.6 \\
+13	&	Economy&2.9&1.9&3.0&2.1&2.8&2.0&0.0&0.0&0.0&13.3&7.1&2.4 \\
+14	&	Politicians&0.0&1.5&0.9&2.6&2.2&4.0&3.6&7.8&11.1&0.0&7.1&2.0 \\
+15	&	Environment&2.9&1.7&1.6&1.2&1.6&1.3&1.8&2.0&11.1&0.0&0.0&1.6 \\
+16	&	Electricity&0.0&1.9&1.5&1.4&0.9&1.3&1.8&2.0&0.0&0.0&0.0&1.5 \\
+17	&	Forced displacement&0.0&2.0&1.5&1.7&0.6&0.0&0.0&2.0&0.0&0.0&0.0&1.4 \\
+18	&	Inflation&2.9&1.3&1.1&1.2&0.6&0.0&0.0&0.0&0.0&0.0&0.0&1.0 \\
+19	&	Water&0.0&2.6&0.8&0.0&0.6&0.0&0.0&0.0&0.0&0.0&0.0&0.9 \\
+20	&	Bad government&2.9&0.9&0.9&0.2&1.6&0.0&0.0&3.9&0.0&0.0&0.0&0.9 \\
+21	&	Habitation&0.0&1.1&0.9&0.7&0.3&0.7&1.8&2.0&0.0&0.0&0.0&0.9 \\
+22	&	Roads&0.0&1.3&0.4&0.7&0.9&1.3&0.0&2.0&0.0&0.0&0.0&0.8 \\
+23	&	Impunity&0.0&1.1&0.5&1.2&0.3&0.0&0.0&0.0&0.0&6.7&0.0&0.7 \\
+24	&	Malnutrition&0.0&0.7&0.4&0.2&0.9&0.7&1.8&0.0&0.0&0.0&0.0&0.6 \\
+25	&	Discrimination&0.0&0.9&0.3&1.0&0.6&0.0&0.0&0.0&0.0&0.0&0.0&0.6 \\
+26	&	Human rights&0.0&0.4&0.1&0.2&1.6&1.3&0.0&0.0&0.0&6.7&0.0&0.5 \\
+27	&	War on terror&0.0&0.2&0.7&0.2&0.3&0.7&0.0&2.0&0.0&0.0&7.1&0.5 \\
+28	&	Population explosion&0.0&0.9&0.3&0.2&0.0&1.3&0.0&0.0&0.0&0.0&0.0&0.4 \\
+29	&	Gangs&0.0&0.0&0.3&0.7&0.0&0.7&0.0&3.9&0.0&6.7&0.0&0.4 \\
+30	&	Armed conflict&2.9&0.6&0.1&0.2&0.3&0.7&0.0&0.0&0.0&0.0&0.0&0.3 \\
+31	&	Financial credit&0.0&0.6&0.3&0.5&0.0&0.7&0.0&0.0&0.0&0.0&0.0&0.3 \\
+32	&	Migration&0.0&0.0&0.0&0.5&0.3&0.7&0.0&0.0&0.0&0.0&0.0&0.2 \\
+33	&	Popular protests&0.0&0.2&0.0&0.2&0.0&0.7&0.0&0.0&0.0&0.0&0.0&0.1 \\
+34	&	Land to farm &0.0&0.2&0.0&0.0&0.0&0.7&0.0&0.0&0.0&0.0&0.0&0.1 \\
+35	&	Terrorism&0.0&0.0&0.3&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.1 \\
+36	&	External debt&0.0&0.0&0.0&0.2&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0 \\
+37	&	Kidnappings&0.0&0.0&0.1&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0 \\
+38	&	Transportations&0.0&0.0&0.1&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0&0.0 \\
+\bottomrule
+\addlinespace[.75ex]
+\end{tabular}
+\par
+\scriptsize{\emph{Source: }The Latin American Public Opinion Project (LAPOP) - Brazil 2010.}\\
+\scriptsize{\emph{a.} Respondents' ranking from the most import problem to the least important problem.}\\
+\scriptsize{\emph{Notes:} \% = Relative frequency (percentage) by column.}
+\scriptsize{Pearson chi2(370) = 434.6210. Pr = 0.011.}
+\end{sidewaystable}
+
+%----------------------------------------------------------------------------------------
+
+\begin{table}
+\centering
+  \caption{Municipal Applications to the Capacity-Building Program (PMAT)} 
+  \label{pmat} 
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\hline\hline\\[-1.8ex] 
+ & \multicolumn{4}{c}{\textit{Dependent variable: PMAT Application}} \\ 
+\cline{2-5}\\[-1.8ex]  
+            &\multicolumn{1}{c}{(Model 1)}&\multicolumn{1}{c}{(Model 2)}&\multicolumn{1}{c}{(Model 3)}&\multicolumn{1}{c}{(Model 4)}\\
+            &\multicolumn{1}{c}{OLS}&\multicolumn{1}{c}{OLS}&\multicolumn{1}{c}{Logit}&\multicolumn{1}{c}{Logit}\\
+\hline\\[-1.8ex] 
+Gini        &      -0.265\sym{***}&      -0.265\sym{***}&      -2.408\sym{*}  &      -2.408\sym{*}  \\
+            &    (0.0678)         &    (0.0825)         &     (1.306)         &     (1.310)         \\
+[1em]
+IPTU (log)     &     0.009\sym{***}&     0.009\sym{*}  &       0.351\sym{***}&       0.351\sym{***}\\
+            &   (0.003)         &   (0.004)         &    (0.078)         &     (0.118)         \\
+[1em]
+Population (log)      &      0.029\sym{***}&      0.029\sym{**} &       0.309\sym{**} &       0.309\sym{*}  \\
+            &   (0.008)         &    (0.012)         &     (0.141)         &     (0.179)         \\
+[1em]
+GDP (log)      &     0.007         &     0.007         &       0.523\sym{***}&       0.523\sym{***}\\
+            &   (0.007)         &   (0.010)         &     (0.156)         &     (0.202)         \\
+[1em]
+Rural Share  &     -0.098\sym{***}&     -0.098\sym{***}&      -0.926\sym{*}  &      -0.926\sym{*}  \\
+            &    (0.023)         &    (0.032)         &     (0.488)         &     (0.540)         \\
+[1em]
+Transfers (log) &      0.059\sym{***}&      0.059\sym{***}&      -0.422         &      -0.422         \\
+            &    (0.017)         &    (0.014)         &     (0.261)         &     (0.319)         \\
+[1em]
+Constant      &      -0.398\sym{***}&      -0.398\sym{***}&      -7.979\sym{***}&      -7.979\sym{***}\\
+            &    (0.065)         &    (0.091)         &     (1.303)         &     (1.479)         \\
+\hline\\[-1.8ex] 
+\(N\)       &        2,732         &        2,732         &        2,732         &        2,732         \\
+\(R^{2}\)   &       0.180         &       0.180         &                     &                     \\
+\textit{Log-Likelihood} &   &  &   -594.689  & -594.689 \\
+\hline\hline\\[-1.8ex] 
+\multicolumn{5}{l}{\footnotesize Standard errors in parentheses. Two-tailed test.}\\
+\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+}
+\end{table}
+
+%----------------------------------------------------------------------------------------
+
+
+\end{document}

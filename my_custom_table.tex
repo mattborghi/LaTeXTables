@@ -1,0 +1,73 @@
+\documentclass{article}
+
+\usepackage{rotating} % use landscape instead of sidewaystable together with longtable.
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{lscape}
+
+%dashed line
+\usepackage{array}
+\usepackage{arydshln}
+\setlength\dashlinedash{0.2pt}
+\setlength\dashlinegap{1.5pt}
+\setlength\arrayrulewidth{0.3pt}
+
+\begin{document}
+
+
+\begin{sidewaystable}
+\centering
+\caption[caption]{Column Conditional Relative Frequency: Brazil's most serious problem by household monthly income (2010). \\\hspace{\textwidth} \textit{Column =} Into which of the following income ranges does the total monthly income of this household fit, including remittances from abroad and the income of all the working adults and children (in Brazilian Reais)? \\\hspace{\textwidth} \textit{Row =} In your opinion, what is the most serious problem faced by Brazil?}
+\scriptsize
+
+\resizebox{\textwidth}{!}{
+
+\begin{tabular}{cc}\\
+\toprule
+
+contract data & 
+\begin{tabular}{cc}
+2 & 2 \\ \hdashline
+3 & $x^{2\mu}\exp^{\left(\frac{\pi\sigma}{\sqrt{x}}\right)}$
+\end{tabular} \\ \hdashline
+\midrule \\
+
+market data & 
+\begin{tabular}{cc}
+2 & 2 \\ \hdashline
+3 & $x^{2\mu}\exp^{\left(\frac{\pi\sigma}{\sqrt{x}}\right)}$
+\end{tabular} \\ \hdashline
+\midrule \\
+
+algo data & 
+\begin{tabular}{cc}
+2 & 
+\begin{tabular}{cc}
+2 & 2 \\ \hdashline
+3 & $x^{2\mu}\exp^{\left(\frac{\pi\sigma}{\sqrt{x}}\right)}$
+\end{tabular} \\ \hdashline
+3 & $x^{2\mu}\exp^{\left(\frac{\pi\sigma}{\sqrt{x}}\right)}$
+\end{tabular} \\ 
+\midrule \\
+
+output data & 
+\begin{tabular}{cc}
+2 & 2 \\ \hdashline
+3 & $x^{2\mu}\exp^{\left(\frac{\pi\sigma}{\sqrt{x}}\right)}$
+\end{tabular} \\ \hdashline 
+
+
+
+\bottomrule
+\addlinespace[.75ex]
+\end{tabular}
+} % end of resizebox
+\par
+\scriptsize{\emph{Source: }The Latin American Public Opinion Project (LAPOP) - Brazil 2010.}\\
+\scriptsize{\emph{a.} Respondents' ranking from the most import problem to the least important problem.}\\
+\scriptsize{\emph{Notes:} \% = Relative frequency (percentage) by column.}
+\scriptsize{Pearson chi2(370) = 434.6210. Pr = 0.011.}
+\end{sidewaystable}
+
+\end{document}
